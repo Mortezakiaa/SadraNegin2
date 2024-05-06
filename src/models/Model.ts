@@ -15,17 +15,23 @@ export abstract class Model<IClass extends FieldValues, IClassResponse> {
  
   abstract onSubmit: (values: IClass) => void;
   abstract schema: ObjectSchema<object | undefined, object>;
-
   public loading: boolean = false;
 
+  public mainStateManager: MainStateManager
+  public empty : () => IClass
+  public axiosInstance : AxiosInstance
+
   constructor(
-    public mainStateManager: MainStateManager,
-    public empty:()=> IClass,
-    public axiosInstance: AxiosInstance
+    mainStateManager: MainStateManager,
+    empty:()=> IClass,
+    axiosInstance: AxiosInstance
   ) {
+    this.empty = empty
+    this.mainStateManager = mainStateManager
+    this.axiosInstance = axiosInstance
   }
   
-  private atrrEvent: AttrEvent<IClass | any> = new AttrEvent(this.empty());
+  private atrrEvent: AttrEvent<IClass | any> = new AttrEvent(this!.empty());
  
   on = this.atrrEvent.on;
   removeOn = this.atrrEvent.removeOn;
