@@ -27,13 +27,13 @@ export const FilterTableContainer = ({
         <>
             <Grid container item style={{ justifyContent: 'center', width: '100%' }} >
                 <form style={{ display: 'flex', justifyContent: 'space-around', width: '100%', marginBottom: '20px' }}>
-                    {/* <FormControlLabel control={
+                    <FormControlLabel control={
                         <Switch
                             checked={filter.sortManfi}
                             onChange={onChangeSortModeHandler}
                         />
-                    } label="ترتیب منفی" /> */}
-                    {/* <TextField
+                    } label="ترتیب منفی" />
+                    <TextField
                         id="outlined-basic"
                         label="فیلتر نوع"
                         variant="outlined"
@@ -46,15 +46,15 @@ export const FilterTableContainer = ({
                                 e.preventDefault();
                                 mainState.getList({ ...filter })
                             }
-                        }} /> */}
+                        }} />
                     <TextField
                         id="outlined-basic"
-                        label="فیلتر نام کالا"
+                        label="فیلتر رنگ"
                         variant="outlined"
                         type="text"
                         name="filter"
                         value={filter.name}
-                        onChange={e => setFilter({ ...filter, name: e.target.value })}
+                        onChange={e => setFilter({ ...filter, color: e.target.value })}
                         onKeyDown={e => {
                             if (e.key === 'Enter') {
                                 e.preventDefault();
