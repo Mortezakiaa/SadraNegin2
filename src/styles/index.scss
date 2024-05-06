@@ -1,0 +1,60 @@
+@import './constants/mixins.scss';
+@import './constants/modals.scss';
+
+@import './components/form.scss';
+
+@import './res/index.scss';
+@import './res/base.scss';
+
+@import './errors/boundry.scss';
+
+@import './routes/activeLink.scss';
+
+/* On Chrome */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* For Firefox and IE */
+.hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column > div > form > fieldset > button{
+    background-color: #32CD32;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-appStyle-14.MuiGrid-container.MuiGrid-direction-xs-column > div.MuiGrid-root.MuiGrid-item > header > div{
+    background-color: #32CD32 ;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column > div > form > fieldset > button{
+    background-color: #32CD32;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-footerBar-9.MuiGrid-item{
+    background-color: #32CD32;
+    
+}
+
+#root > div > div.MuiGrid-root.makeStyles-footerBar-9.MuiGrid-item > p{
+    color: red !important;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column > div > form > fieldset > button > span.MuiButton-label{
+    color: red !important;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column > div > form > fieldset > div.makeStyles-paper-2 > h1{
+    color: #32CD32;
+    text-decoration: underline red ;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column{
+    background-color: red;
+}
+
+#root > div > div.MuiGrid-root.makeStyles-main-1.MuiGrid-container.MuiGrid-direction-xs-column > div > form{
+    background-color: white;
+}
+

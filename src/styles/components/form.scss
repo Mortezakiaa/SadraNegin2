@@ -1,0 +1,42 @@
+
+.self-form {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem;
+    &:not(.row) {
+        > fieldset {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+    }
+
+    > fieldset {
+        min-width: 50px;
+        > legend {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Almarai';
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            color: #304ffe;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 40%;
+                border-bottom: 4px double #304ffe;
+                border-width: 40%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+}

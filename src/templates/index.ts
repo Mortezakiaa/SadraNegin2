@@ -1,0 +1,1 @@
+export { PrintTemplate } from './Print';

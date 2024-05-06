@@ -1,0 +1,241 @@
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    direction: rtl;
+    #root {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        > .App {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+.view-site {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swal-modal {
+    direction: ltr;
+}
+
+.MuiCardMedia-root {
+    background-size: 100% 100% !important;
+    transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    &:hover {
+        background-size: 150% 150% !important;
+        transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+.self-card {
+    transform: none;
+    transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.4);
+        transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+.disable {
+    filter: blur(2px);
+    background: rgba(0,0,0,.2);
+    cursor: default;
+}
+
+.Toastify__toast-container--top-right {
+    top: 1rem !important;
+}
+
+.Toastify__toast-container {
+    @media only screen and (max-width: 480px) {
+        width: 320px !important;
+    }
+}
+
+.MuiInputBase-input {
+    width: auto !important;
+}
+
+form.grid {
+    > fieldset {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        > div:not(.table) {
+            flex-basis: 48%;
+        }
+    
+        @media screen and (max-width: 800px) {
+            justify-content: center;
+            > div:not(.table) {
+                flex-basis: 95%;
+            }
+        }
+    }
+}
+
+.self-container {
+    padding: 1rem 2rem;
+    @media screen and (max-width: 600px) {
+        padding: 0;
+        > form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: .5rem 0;
+            > fieldset {
+                flex-basis: 100%;
+                .table {
+                    max-width: calc(100vw - 1rem) !important;
+                    > div {
+                        max-height: calc(100vh - 14rem) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.self-table {
+    @media screen and (max-width: 600px) {
+        td, th {
+            font-size: 10px;
+            padding: .1rem .2rem;
+        }
+    }
+}
+
+.MuiInputBase-formControl {
+    input {
+        width: 100% !important;
+    }
+}
+
+.MuiTable-root {
+    tr {
+        transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+        // cursor: pointer;
+        &:hover {
+            background: rgba(0,0,0,.2);
+            transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+}
+
+.control-row {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    > div {
+        flex-grow: 1;
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.self-number-box-wrapper {
+    min-width: 50px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:focus-within {
+        > input {
+            border: 2px solid #253491 !important;
+            transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        > label {
+            top: 0;
+            color: #253491;
+            font-size: 12px;
+            transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
+    &:hover {
+        > input {
+            border-color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}
+.self-number-box {
+    position: relative;
+    font: inherit;
+    display: block;
+    height: 1.1876em;
+    overflow-wrap: unset;
+    text-overflow: ellipsis;
+    letter-spacing: inherit;
+    padding: 18.5px 14px;
+    box-sizing: content-box;
+    border: 1px solid rgba(118, 118, 118, .5);
+    border-radius: 5px;
+    color: #000000;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.self-number-box-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    color: rgba(118, 118, 118, .9);
+    padding: .1rem .3rem;
+    background: white;
+    transform: translate(0, -50%);
+    z-index: 1;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &.by-value {
+        top: 0;
+        font-size: 12px;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}
+
+.MuiBadge-badge {
+    text-align: center;
+    background: white;
+    color: #f44336;
+    top: .7rem !important;
+    right: .7rem !important;
+}
+
+.close-modal {
+    position: absolute;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(2rem, .5rem);
+}
+
+.self-modal {
+    @media screen and (max-width: 500px) {
+        width: -webkit-fill-available !important;
+        max-width: unset !important;
+        max-height: unset !important;
+    }
+}

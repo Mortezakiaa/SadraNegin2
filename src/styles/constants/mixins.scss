@@ -1,0 +1,94 @@
+@mixin flexRowStart {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexRowCenter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexRowEnd {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexColumnStart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexColumnCenter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexColumnEnd {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+@mixin flexColumnNoWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+@mixin flexRowNoWrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    flex-basis: auto;
+}

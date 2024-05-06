@@ -1,0 +1,11 @@
+.self-toast-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 1rem;
+    > span {
+        direction: rtl;
+    }
+}

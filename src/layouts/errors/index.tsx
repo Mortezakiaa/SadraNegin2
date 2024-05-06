@@ -1,0 +1,1 @@
+export { SelfErrorBoundry } from './boundry';
