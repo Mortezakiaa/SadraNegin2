@@ -25,6 +25,10 @@ export abstract class Model<IClass extends FieldValues, IClassResponse> {
   public mainStateManager: MainStateManager;
   public empty: () => IClass;
   public axiosInstance: AxiosInstance;
+  private atrrEvent: AttrEvent<IClass>;
+  public sync: ApiSync 
+
+  
   public on: (eventName: ITriggerMessage, callBack: Callback) => void;
   public removeOn: (eventName: ITriggerMessage) => void;
   public trigger: (eventName: ITriggerMessage, ...args: any) => void;
@@ -68,9 +72,14 @@ export abstract class Model<IClass extends FieldValues, IClassResponse> {
     this.getAll = this.atrrEvent.getAll;
     this.set = this.atrrEvent.set;
     this.setKey = this.atrrEvent.setKey;
+
+    this.sync = new ApiSync(
+      this.axiosInstance,
+      this.mainStateManager
+    );
   }
 
-  private atrrEvent: AttrEvent<IClass>;
+ 
 
   onInvalid = <M extends Model<IClass, IClassResponse>>(
     error: DeepMap<M, FieldError>
@@ -83,10 +92,7 @@ export abstract class Model<IClass extends FieldValues, IClassResponse> {
     }
     // this.trigger('info', error);
   };
-  public sync: ApiSync = new ApiSync(
-    this!.axiosInstance,
-    this!.mainStateManager
-  );
+ 
   onValid = (values: SubmitHandler<IClass>) => {
     this.loading = true;
     this.onSubmit(values as any);
