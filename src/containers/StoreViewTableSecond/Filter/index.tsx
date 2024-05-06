@@ -53,7 +53,7 @@ export const FilterTableContainer = ({
                         variant="outlined"
                         type="text"
                         name="filter"
-                        value={filter.name}
+                        value={filter.color}
                         onChange={e => setFilter({ ...filter, color: e.target.value })}
                         onKeyDown={e => {
                             if (e.key === 'Enter') {
