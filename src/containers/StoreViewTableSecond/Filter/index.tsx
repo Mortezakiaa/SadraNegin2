@@ -33,7 +33,7 @@ export const FilterTableContainer = ({
                             onChange={onChangeSortModeHandler}
                         />
                     } label="ترتیب منفی" />
-                    <TextField
+                    {/* <TextField
                         id="outlined-basic"
                         label="فیلتر نوع"
                         variant="outlined"
@@ -46,7 +46,7 @@ export const FilterTableContainer = ({
                                 e.preventDefault();
                                 mainState.getList({ ...filter })
                             }
-                        }} />
+                        }} /> */}
                     <TextField
                         id="outlined-basic"
                         label="فیلتر رنگ"

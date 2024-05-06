@@ -12,10 +12,7 @@ export const StoreViewTableHead = ({withAssets}: Header) => {
     <TableHead style={{position: 'sticky', top:0, border:'0px'}}>
             <TableRow>
                 <StyledTableCell style={{ minWidth: '6rem' }} >
-                    نوع 
-                </StyledTableCell>
-                <StyledTableCell style={{ minWidth: '6rem' }} >
-                    رنگ
+                    نام کالا 
                 </StyledTableCell>
                 <StyledTableCell style={{ minWidth: '6rem' }} >
                     تعداد سفارش
